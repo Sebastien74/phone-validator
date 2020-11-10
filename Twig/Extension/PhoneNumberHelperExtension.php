@@ -20,7 +20,7 @@ use Twig\TwigTest;
 /**
  * Phone number helper Twig extension.
  */
-class PhoneNumberHelperExtension extends \AbstractExtension
+class PhoneNumberHelperExtension extends AbstractExtension
 {
     /**
      * Phone number helper.

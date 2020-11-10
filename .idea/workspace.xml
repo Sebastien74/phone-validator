@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f589e6dd-13e6-4638-b63f-36d24866a4af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Twig/Extension/PhoneNumberHelperExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/Twig/Extension/PhoneNumberHelperExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\phone-validator" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -35,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605029403104</updated>
-      <workItem from="1605029404296" duration="534000" />
+      <workItem from="1605029404296" duration="759000" />
     </task>
     <servers />
   </component>
