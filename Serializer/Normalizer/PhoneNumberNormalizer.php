@@ -83,7 +83,7 @@ class PhoneNumberNormalizer implements NormalizerInterface, DenormalizerInterfac
      *
      * @throws UnexpectedValueException
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data, $class, $format = null, array $context = array()): mixed
     {
         try {
             return $this->phoneNumberUtil->parse($data, $this->region);
@@ -95,7 +95,7 @@ class PhoneNumberNormalizer implements NormalizerInterface, DenormalizerInterfac
     /**
      * {@inheritdoc}
      */
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null, array $context = array()): bool
     {
         return $type === 'libphonenumber\PhoneNumber';
     }
