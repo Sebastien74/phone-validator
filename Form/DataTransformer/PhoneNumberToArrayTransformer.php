@@ -26,7 +26,7 @@ class PhoneNumberToArrayTransformer implements DataTransformerInterface
     /**
      * @var array
      */
-    private array $countryChoices;
+    private $countryChoices;
 
     /**
      * Constructor.
@@ -41,7 +41,7 @@ class PhoneNumberToArrayTransformer implements DataTransformerInterface
     /**
      * {@inheritdoc}
      */
-    public function transform($phoneNumber): array
+    public function transform($phoneNumber)
     {
         if (null === $phoneNumber) {
             return array('country' => '', 'number' => '');

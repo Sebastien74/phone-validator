@@ -30,21 +30,21 @@ class PhoneNumberNormalizer implements NormalizerInterface, DenormalizerInterfac
      *
      * @var string
      */
-    private string $region;
+    private $region;
 
     /**
      * Display format.
      *
      * @var int
      */
-    private int $format;
+    private $format;
 
     /**
      * Display format.
      *
      * @var PhoneNumberUtil
      */
-    private PhoneNumberUtil $phoneNumberUtil;
+    private $phoneNumberUtil;
 
     /**
      * Constructor.

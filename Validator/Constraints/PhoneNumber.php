@@ -35,21 +35,31 @@ class PhoneNumber extends Constraint
 
     const INVALID_PHONE_NUMBER_ERROR = 'ca23f4ca-38f4-4325-9bcc-eb570a4abe7f';
 
-    protected static array $errorNames = array(
+    protected static $errorNames = array(
         self::INVALID_PHONE_NUMBER_ERROR => 'INVALID_PHONE_NUMBER_ERROR',
     );
 
-    public mixed $message = null;
-    public string $type = self::ANY;
+    public $message = null;
+    public $type = self::ANY;
     public $defaultRegion = PhoneNumberUtil::UNKNOWN_REGION;
 
-    public function getType(): string
+    public function getType()
     {
-        return match ($this->type) {
-            self::FIXED_LINE, self::MOBILE, self::PAGER, self::PERSONAL_NUMBER, self::PREMIUM_RATE, self::SHARED_COST, self::TOLL_FREE, self::UAN, self::VOIP, self::VOICEMAIL => $this->type,
-            default => self::ANY,
-        };
+        switch ($this->type) {
+            case self::FIXED_LINE:
+            case self::MOBILE:
+            case self::PAGER:
+            case self::PERSONAL_NUMBER:
+            case self::PREMIUM_RATE:
+            case self::SHARED_COST:
+            case self::TOLL_FREE:
+            case self::UAN:
+            case self::VOIP:
+            case self::VOICEMAIL:
+                return $this->type;
+        }
 
+        return self::ANY;
     }
 
     public function getMessage()
@@ -58,19 +68,29 @@ class PhoneNumber extends Constraint
             return $this->message;
         }
 
-        return match ($this->type) {
-            self::FIXED_LINE => 'This value is not a valid fixed-line number.',
-            self::MOBILE => 'This value is not a valid mobile number.',
-            self::PAGER => 'This value is not a valid pager number.',
-            self::PERSONAL_NUMBER => 'This value is not a valid personal number.',
-            self::PREMIUM_RATE => 'This value is not a valid premium-rate number.',
-            self::SHARED_COST => 'This value is not a valid shared-cost number.',
-            self::TOLL_FREE => 'This value is not a valid toll-free number.',
-            self::UAN => 'This value is not a valid UAN.',
-            self::VOIP => 'This value is not a valid VoIP number.',
-            self::VOICEMAIL => 'This value is not a valid voicemail access number.',
-            default => 'This value is not a valid phone number.',
-        };
+        switch ($this->type) {
+            case self::FIXED_LINE:
+                return 'This value is not a valid fixed-line number.';
+            case self::MOBILE:
+                return 'This value is not a valid mobile number.';
+            case self::PAGER:
+                return 'This value is not a valid pager number.';
+            case self::PERSONAL_NUMBER:
+                return 'This value is not a valid personal number.';
+            case self::PREMIUM_RATE:
+                return 'This value is not a valid premium-rate number.';
+            case self::SHARED_COST:
+                return 'This value is not a valid shared-cost number.';
+            case self::TOLL_FREE:
+                return 'This value is not a valid toll-free number.';
+            case self::UAN:
+                return 'This value is not a valid UAN.';
+            case self::VOIP:
+                return 'This value is not a valid VoIP number.';
+            case self::VOICEMAIL:
+                return 'This value is not a valid voicemail access number.';
+        }
 
+        return 'This value is not a valid phone number.';
     }
 }
