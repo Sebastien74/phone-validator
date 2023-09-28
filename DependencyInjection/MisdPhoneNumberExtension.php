@@ -26,7 +26,7 @@ class MisdPhoneNumberExtension extends Extension
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
@@ -61,7 +61,7 @@ class MisdPhoneNumberExtension extends Extension
      *
      * @param $def
      */
-    private function setFactory(Definition $def)
+    private function setFactory(Definition $def): void
     {
         if (method_exists($def, 'setFactory')) {
             // to be inlined in services.xml when dependency on Symfony DependencyInjection is bumped to 2.6

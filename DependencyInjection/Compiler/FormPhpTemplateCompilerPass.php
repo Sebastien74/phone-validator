@@ -22,7 +22,7 @@ class FormPhpTemplateCompilerPass implements CompilerPassInterface
     /**
      * {@inheritdoc}
      */
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if (false === $container->hasParameter('templating.helper.form.resources')) {
             return;

@@ -35,7 +35,7 @@ class PhoneNumberType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         if (self::WIDGET_COUNTRY_CHOICE === $options['widget']) {
             $util = PhoneNumberUtil::getInstance();
@@ -115,7 +115,7 @@ class PhoneNumberType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildView(FormView $view, FormInterface $form, array $options)
+    public function buildView(FormView $view, FormInterface $form, array $options): void
     {
         $view->vars['type'] = 'tel';
         $view->vars['widget'] = $options['widget'];
@@ -127,7 +127,7 @@ class PhoneNumberType extends AbstractType
      * @deprecated To be removed when the Symfony Form component compatibility
      *             is bumped to at least 2.7.
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function setDefaultOptions(OptionsResolverInterface $resolver): void
     {
         $this->configureOptions($resolver);
     }
@@ -135,7 +135,7 @@ class PhoneNumberType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults(
             array(

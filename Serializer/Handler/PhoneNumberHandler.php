@@ -29,7 +29,7 @@ class PhoneNumberHandler
      *
      * @var PhoneNumberUtil
      */
-    private $phoneNumberUtil;
+    private PhoneNumberUtil $phoneNumberUtil;
 
     /**
      * Constructor.
@@ -51,7 +51,7 @@ class PhoneNumberHandler
      *
      * @return mixed Serialized phone number.
      */
-    public function serializePhoneNumber(VisitorInterface $visitor, PhoneNumber $phoneNumber, array $type, $context)
+    public function serializePhoneNumber(VisitorInterface $visitor, PhoneNumber $phoneNumber, array $type, $context): mixed
     {
         $formatted = $this->phoneNumberUtil->format($phoneNumber, PhoneNumberFormat::E164);
 
@@ -67,7 +67,7 @@ class PhoneNumberHandler
      *
      * @return PhoneNumber|null Phone number.
      */
-    public function deserializePhoneNumberFromJson(JsonDeserializationVisitor $visitor, $data, array $type)
+    public function deserializePhoneNumberFromJson(JsonDeserializationVisitor $visitor, $data, array $type): ?PhoneNumber
     {
         if (null === $data) {
             return null;
@@ -85,7 +85,7 @@ class PhoneNumberHandler
      *
      * @return PhoneNumber|null Phone number.
      */
-    public function deserializePhoneNumberFromXml(XmlDeserializationVisitor $visitor, $data, array $type)
+    public function deserializePhoneNumberFromXml(XmlDeserializationVisitor $visitor, $data, array $type): ?PhoneNumber
     {
         $attributes = $data->attributes();
         if (
