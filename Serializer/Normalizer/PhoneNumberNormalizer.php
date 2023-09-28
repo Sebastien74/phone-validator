@@ -99,4 +99,9 @@ class PhoneNumberNormalizer implements NormalizerInterface, DenormalizerInterfac
     {
         return $type === 'libphonenumber\PhoneNumber';
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [];
+    }
 }
