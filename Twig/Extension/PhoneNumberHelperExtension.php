@@ -27,7 +27,7 @@ class PhoneNumberHelperExtension extends AbstractExtension
      *
      * @var PhoneNumberHelper
      */
-    protected $helper;
+    protected PhoneNumberHelper $helper;
 
     /**
      * Constructor.

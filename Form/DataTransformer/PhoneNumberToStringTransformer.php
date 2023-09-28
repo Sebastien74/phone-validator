@@ -28,14 +28,14 @@ class PhoneNumberToStringTransformer implements DataTransformerInterface
      *
      * @var string
      */
-    private $defaultRegion;
+    private string $defaultRegion;
 
     /**
      * Display format.
      *
      * @var int
      */
-    private $format;
+    private int $format;
 
     /**
      * Constructor.
