@@ -30,7 +30,7 @@ class ParentLocalesCompilerPass implements CompilerPassInterface
      *
      * @var array
      */
-    private array $localParents = array(
+    private $localParents = array(
       'es_AR' => 'es_419',
       'es_BO' => 'es_419',
       'es_CL' => 'es_419',
@@ -56,7 +56,7 @@ class ParentLocalesCompilerPass implements CompilerPassInterface
     /**
      * {@inheritdoc}
      */
-    public function process(ContainerBuilder $container): void
+    public function process(ContainerBuilder $container)
     {
         try {
             $translator = $container->findDefinition('translator');
