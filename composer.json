@@ -11,7 +11,7 @@
     "require": {
         "php": ">=5.3.9",
         "giggsey/libphonenumber-for-php": "~5.7|~6.0|~7.0|~8.0",
-        "symfony/framework-bundle": "~2.7|~3.0|~4.0|~5.1|~6.0"
+        "symfony/framework-bundle": "~2.7|~3.0|~4.0|~5.1|~6.0|~7.0"
     },
     "require-dev": {
         "doctrine/doctrine-bundle": "~1.0",
